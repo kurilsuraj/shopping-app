@@ -45,6 +45,7 @@ class Home extends Component {
 
   renderSuccessView = () => {
     const { productsList } = this.state;
+    console.log(productsList);
     return (
       <div>
         <ul>
@@ -87,9 +88,6 @@ class Home extends Component {
     }
   };
   render() {
-    const { productsList } = this.state;
-    console.log(productsList);
-
     return (
       <div>
         <Header />

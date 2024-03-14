@@ -23,7 +23,7 @@ class Home extends Component {
 
   getProducts = async () => {
     this.setState({ apiStatus: apiStatusConstants.inProgress });
-    const url = "https://fakestoreapi.com/products";
+    const url = "https://fakestoreapi.com/product";
     const response = await fetch(url);
 
     if (response.ok) {

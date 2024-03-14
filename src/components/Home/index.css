@@ -4,3 +4,17 @@
   align-items: center;
   height: 100vh;
 }
+
+.unorder-list-container {
+  list-style: none;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+@media screen and (min-width: 768px) {
+  .unorder-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

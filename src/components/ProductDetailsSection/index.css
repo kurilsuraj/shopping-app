@@ -1,0 +1,32 @@
+.products-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+.product-details-img {
+  align-self: center;
+  width: 30vw;
+  height: 30vw;
+  margin-top: 15px;
+}
+
+p {
+  color: #64748b;
+  font-size: 12px;
+  font-family: "DM Sans";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 14px;
+  }
+}

@@ -4,17 +4,31 @@ import "./index.css";
 const AllProductsSection = (props) => {
   const { details } = props;
   const { id, image, price, rating, title } = details;
-  const { rate } = rating;
+
+  const { rate, count } = rating;
   return (
     <li className="list-item-c">
-      <Link to={`/products/${id}`}>
-        <img width="100px" src={image} alt={title} />
+      <Link className="link-items" to={`/products/${id}`}>
         <div>
-          <h1>{title}</h1>
+          <img width="100px" src={image} alt={title} />
+        </div>
+
+        <div className="product-name-rate-price-container">
+          <h1 className="heading-title">{title}</h1>
           <p>Rs. {price}</p>
-          <p>{rate} ratings</p>
+          <div className="rating-container">
+            <img
+              className="rating-star-img"
+              src="https://res.cloudinary.com/dcqsyb9d7/image/upload/v1708427789/tastyKitchensApp/xj6b5xzkxiuac26bzryq.png"
+              alt="stars"
+            />
+            <p>
+              {rate} ({count})
+            </p>
+          </div>
         </div>
       </Link>
+      <hr className="horizontal-line" />
     </li>
   );
 };

@@ -28,6 +28,7 @@ class Home extends Component {
 
     if (response.ok) {
       const data = await response.json();
+      console.log(data);
       this.setState({
         productsList: data,
         apiStatus: apiStatusConstants.success,
@@ -45,10 +46,10 @@ class Home extends Component {
 
   renderSuccessView = () => {
     const { productsList } = this.state;
-    console.log(productsList);
+
     return (
       <div>
-        <ul>
+        <ul className="unorder-list-container">
           {productsList.map((each) => (
             <AllProductsSection key={each.id} details={each} />
           ))}
